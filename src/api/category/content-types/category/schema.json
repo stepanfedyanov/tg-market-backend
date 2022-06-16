@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Categories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Category": {
+      "type": "string",
+      "required": true
+    },
+    "Channel": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::telegram.telegram",
+      "mappedBy": "Categories"
+    }
+  }
+}
